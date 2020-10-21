@@ -1,47 +1,45 @@
-/// <reference path='BaseComponent.ts' />
-/// <reference path='../Decorators/Autobind.ts'/>
-/// <reference path='../Models/Project.ts'/>
-/// <reference path='../Models/DragDrop.ts'/>
+import { Component } from './BaseComponent.js';
+import { autobind } from '../Decorators/Autobind.js';
+import { Project } from '../Models/Project.js';
+import { Draggable } from '../Models/DragDrop.js';
 
-namespace App {
-  // Project Item Class
-  export class ProjectItem extends Component<HTMLUListElement, HTMLLIElement> implements Draggable {
-    private project: Project;
-    get persons() {
-      if (this.project.people === 1) {
-        return '1 person';
-      } else {
-        return `${this.project.people} persons`;
-      }
+// Project Item Class
+export class ProjectItem extends Component<HTMLUListElement, HTMLLIElement> implements Draggable {
+  private project: Project;
+  get persons() {
+    if (this.project.people === 1) {
+      return '1 person';
+    } else {
+      return `${this.project.people} persons`;
     }
+  }
 
-    constructor(hostId: string, project: Project) {
-      super('single-project', hostId, false, project.id);
-      this.project = project;
-      this.configure();
-      this.renderContent();
-    }
+  constructor(hostId: string, project: Project) {
+    super('single-project', hostId, false, project.id);
+    this.project = project;
+    this.configure();
+    this.renderContent();
+  }
 
-    @autobind
-    dragStartHandler(event: DragEvent) {
-      event.dataTransfer!.setData('text/plain', this.project.id);
-      event.dataTransfer!.effectAllowed = 'move';
-    }
+  @autobind
+  dragStartHandler(event: DragEvent) {
+    event.dataTransfer!.setData('text/plain', this.project.id);
+    event.dataTransfer!.effectAllowed = 'move';
+  }
 
-    @autobind
-    dragEndHandler(_: DragEvent) {
-      // console.log('DragEnd');
-    }
+  @autobind
+  dragEndHandler(_: DragEvent) {
+    // console.log('DragEnd');
+  }
 
-    configure() {
-      this.element.addEventListener('dragstart', this.dragStartHandler);
-      this.element.addEventListener('dragend', this.dragEndHandler);
-    }
+  configure() {
+    this.element.addEventListener('dragstart', this.dragStartHandler);
+    this.element.addEventListener('dragend', this.dragEndHandler);
+  }
 
-    renderContent() {
-      this.element.querySelector('h2')!.textContent = this.project.title;
-      this.element.querySelector('h3')!.textContent = this.persons + ' assigned.';
-      this.element.querySelector('p')!.textContent = this.project.description;
-    }
+  renderContent() {
+    this.element.querySelector('h2')!.textContent = this.project.title;
+    this.element.querySelector('h3')!.textContent = this.persons + ' assigned.';
+    this.element.querySelector('p')!.textContent = this.project.description;
   }
 }
