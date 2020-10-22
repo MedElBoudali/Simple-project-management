@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/MedElBoudali/Simple-project-management/issues"
   },
-  "homepage": "https://github.com/MedElBoudali/Simple-project-management#readme"
+  "homepage": "https://github.com/MedElBoudali/Simple-project-management#readme",
+  "devDependencies": {
+    "ts-loader": "^8.0.6",
+    "typescript": "^4.0.3",
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  }
 }
