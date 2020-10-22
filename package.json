@@ -4,7 +4,7 @@
   "description": "drag and drop",
   "main": "src/app.ts\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D./src/app.ts",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack serve",
     "build": "webpack --mode production"
   },
   "repository": {
