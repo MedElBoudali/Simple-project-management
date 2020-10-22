@@ -1,0 +1,19 @@
+{
+  "name": "project-manager",
+  "version": "1.0.0",
+  "description": "drag and drop",
+  "main": "src/app.ts\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D./src/app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MedElBoudali/Simple-project-management.git"
+  },
+  "author": "Med",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MedElBoudali/Simple-project-management/issues"
+  },
+  "homepage": "https://github.com/MedElBoudali/Simple-project-management#readme"
+}
