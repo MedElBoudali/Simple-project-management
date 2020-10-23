@@ -2,7 +2,7 @@
   "name": "project-manager",
   "version": "1.0.0",
   "description": "drag and drop",
-  "main": "src/app.ts\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D./src/app.ts",
+  "main": "./src/App.ts",
   "scripts": {
     "start": "webpack -w",
     "dev": "webpack",
@@ -20,6 +20,10 @@
   "homepage": "https://github.com/MedElBoudali/Simple-project-management#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^2.0.0",
     "ts-loader": "^8.0.6",
     "typescript": "^4.0.3",
     "webpack": "^5.2.0",
